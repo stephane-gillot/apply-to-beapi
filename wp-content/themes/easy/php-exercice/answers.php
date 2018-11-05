@@ -20,6 +20,35 @@ echo  ' test echo ' . " le nombre est égal à $n" . $condition;
 
 
 
+//Display all numbers between 1 and 10 (including 10) using a `while` loop
+$x = 1;
+while ($x<=10){
+    echo $x++;    
+}
+
+
+for ($x=1 ; $x<=10; $x++){
+    echo $x;    
+}
+
+function oneToTen(){
+    $x = 1;
+    while ($x<=10){
+        echo $x++;    
+    }
+}
+
+oneToTen();
+
+function oneToParam($max){
+    $x = 1;
+    while ($x<=$max){
+        echo $x++;    
+    }
+}
+
+oneToParam(20);
+
 
 
 
