@@ -34,7 +34,8 @@ for ($x=1 ; $x<=10; $x++){
 function oneToTen(){
     $x = 1;
     while ($x<=10){
-        echo $x++;    
+        echo $x++;
+        echo '<br/>';    
     }
 }
 
@@ -43,15 +44,63 @@ oneToTen();
 function oneToParam($max){
     $x = 1;
     while ($x<=$max){
-        echo $x++;    
+        echo $x++;
+        echo '<br/>';    
     }
 }
 
 oneToParam(20);
 
+// Arrays
+$a = array(5, 12, 10, 21, 2, 6, 8, 20, 14, 9, 12);
+
+
+function displayUn($a){
+    
+    foreach ($a as $value){
+        echo $value;
+        echo '<br/>';
+    }
+} 
+
+displayUn($a);
+
+function displayMoyenne($a){
+    $s = array_sum($a);
+    $nb = count($a);
+    echo $s/$nb;
+}
+
+displayMoyenne($a);
+
+
+function displayThree($a){
+    $r = 0;
+    foreach ($a as $value){
+        if ($value >= 10) {
+            $r++;
+        }
+    }
+    echo $r;
+}
+
+displayThree($a);
+
+function displayFour($a){
+    if (in_array(20, $a,true)){
+        echo '20 est présent';
+    } else {
+        echo '20 est absent';
+    }
+}
+
+displayFour($a);
 
 
 
+function displayFifth($a){
+    rsort($a);
+    echo $a[0];
+}
 
-
-
+displayFifth($a);
